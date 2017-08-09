@@ -12,19 +12,19 @@ module.exports = function(app) {
   passport.use(new LocalStrategy(
     function(username, password, done) {
       //Finds user in db based on username (which is the email in db)
-      db.employ_basic.findOne({ 
+      db.employee_basic.findOne({ 
         where: {
           email: username
         },
-        include:[db.employ_option]
+        include:[db.employee_option]
       }).then(function (data) {
           //Returns error if there is no user when login attempted.
           if (!data) { 
             return done(null, false, { message: 'This email is not in the system.' })
           }
         var user = data.dataValues;
-        if(user.employ_option){
-            var userpassword = user.employ_option.dataValues.password
+        if(user.employee_option){
+            var userpassword = user.employee_option.dataValues.password
             //Encrypts the password the user entered in login attempt, checks it against the encrypted string stored in database to see if a match.
             //Original user password is never known/shown for security.
             bcrypt.compare(password,userpassword, function(err, res) {
@@ -52,11 +52,11 @@ module.exports = function(app) {
 
  //Deserializes user on page load using their UserID to get full user info, which can be used with req.user
   passport.deserializeUser(function(id, done) {
-    db.employ_basic.findOne({
+    db.employee_basic.findOne({
       where: {
         id: id
       }
-    },{include:[{model:db.employ_options}]
+    },{include:[{model:db.employee_options}]
   }).then(function (user) {
       if (user == null) {
         done(new Error('Wrong user id.'))

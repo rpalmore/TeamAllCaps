@@ -10,8 +10,6 @@ Username: plauditapp@gmail.com | Password: guest
 
 Plaudit! is a workplace application that lets you publically applaud the achievements of your peers and employees. We believe workplace culture should not only encourage positive feedback, but celebrate it!
 
-Note: Styling can be customized based on client preference or corporate branding.
-
 ### Core Features
 
 Plaudit allows users to publically recognize their co-workers' achievements via an awards system. The most recent awards are displayed in an activity feed on the home page. Awards given to (or by) a user will also be visible on their profile page. 
@@ -22,7 +20,9 @@ Use the autocompleting search bar to find members and see their profile pages, w
 
 The app is designed to be simple and easy to use, and is fully responsive.
 
-Customization: We recognize that each organization is unique, so we designed Plaudit to be highly customizable. The information on each user's profile page can be tailored for your needs, and the color scheme can be altered to match your brand. In addition, an organization can choose to use different award icons (i.e., a Plaudit Badge) and/or declare meanings for each type of award. For example, you may choose to include awards at different tiers (a small award for cleaning a supply closet, a giant award for working 36 hours straight to finish a massive product launch), or simply categorize the awards to fit their your unique style (a "great idea" award, an "extra effort" award, a "helpfulness" award, etc).  
+### Customization
+
+We recognize that each organization is unique, so we designed Plaudit to be highly customizable. The information on each user's profile page can be tailored for your needs, and the color scheme can be altered to match your brand. In addition, an organization can choose to use different award icons and assign specific meanings to each type of award. For example, you may choose to include different tiers (a small award for cleaning a supply closet, a giant award for working 36 hours straight to launch a new product), or simply categorize the awards to fit your unique style (a "great idea" award, an "extra effort" award, a "helpfulness" award, etc).  
 
 ### Web App Outline
 

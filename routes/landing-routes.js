@@ -78,18 +78,18 @@ function updatePassword(email, password){
        //          hashedPassword = hash;
        //          });
        // })
-        db.employ_basic.findOne({
+        db.employee_basic.findOne({
             where:{
                 email:email
             }
         }).then(function(data){
             if(data){
-                var employ_id = data.dataValues.id;
-                db.employ_option.update({
+                var employee_id = data.dataValues.id;
+                db.employee_option.update({
                     password: hashedPassword,
                 },{
                     where: {
-                        employBasicId :employ_id
+                        employeeBasicId :employee_id
                     }
                 }).then(function() {
                     res.send(true);
@@ -105,16 +105,16 @@ function updatePassword(email, password){
     app.post('/sendemail', function(req, res) {        
     var newPassword = randomstring.generate(8);
     var email = req.body.email;
-    db.employ_basic.findOne({
+    db.employee_basic.findOne({
             where:{
                 email:req.body.email
             }
         }).then(function(data){
             if(data){
-                var employ_id = data.dataValues.id;
-                db.employ_option.findOne({
+                var employee_id = data.dataValues.id;
+                db.employee_option.findOne({
                     where:{
-                        employBasicId :employ_id
+                        employeeBasicId :employee_id
                     }
                 }).then(function(data){
                     if(data){
@@ -159,21 +159,21 @@ function updatePassword(email, password){
        //          hashedPassword = hash;
        //          });
        // })
-        db.employ_basic.findOne({
+        db.employee_basic.findOne({
             where:{
                 email:req.body.email
             }
         }).then(function(data){
             if(data){
-                var employ_id = data.dataValues.id;
-                db.employ_option.findOne({
+                var employee_id = data.dataValues.id;
+                db.employee_option.findOne({
                     where:{
-                        employBasicId :employ_id
+                        employeeBasicId :employee_id
                     }
                 }).then(function(data){
                     if(!data) {
-                        db.employ_option.create({
-                            employBasicId:employ_id,
+                        db.employee_option.create({
+                            employeeBasicId:employee_id,
                             password: hashedPassword,
                             favorite: req.body.favorite
                         }).then(function() {
@@ -190,16 +190,16 @@ function updatePassword(email, password){
     });
 
     app.post('/checkemail', function(req, res){ 
-        db.employ_basic.findOne({
+        db.employee_basic.findOne({
             where: {
                 email: req.body.email
             }
         }).then(function(data){
             if(data){
-                var employ_id = data.dataValues.id;
-                db.employ_option.findOne({
+                var employee_id = data.dataValues.id;
+                db.employee_option.findOne({
                     where:{
-                        employBasicId :employ_id
+                        employeeBasicId :employee_id
                     }
                 }).then(function(data){
                     if(data){

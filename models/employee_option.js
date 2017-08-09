@@ -1,11 +1,5 @@
-// table employ_options schema
-// Columns: email (primary key), photo (binary string), 
-// Favorite (anything fun we will define later)
-// Foreign key relationship established between email and email in employ_basics table, foreign key: ID, 
-// reference: ID from employ_basics table
-
 module.exports = function(sequelize, DataTypes) {
-  var employ_option = sequelize.define("employ_option", {
+  var employee_option = sequelize.define("employee_option", {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -24,12 +18,12 @@ module.exports = function(sequelize, DataTypes) {
     {
       classMethods:{
         associate:function(models){
-          employ_option.belongsTo(models.employ_basic, {foreignKey:{
+          employee_option.belongsTo(models.employee_basic, {foreignKey:{
             allowNull:false
           }
         });
       }
     }
   })
-  return employ_option;
+  return employee_option;
 };

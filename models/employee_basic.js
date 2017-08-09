@@ -1,12 +1,5 @@
-// table employ_basics schema
-// Columns: id (primary key), name (first and last name), 
-// email(email adress, set as unique), phone(phone number),
-// linkedin_url, title(position in the company),manager_id(manager index for this employee)
-// Foreign key relationship established between id and manager_id, foreign key: manager_id, 
-// reference: id
-
 module.exports = function(sequelize, DataTypes) {
-  var employ_basic = sequelize.define("employ_basic", {
+  var employee_basic = sequelize.define("employee_basic", {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -37,7 +30,7 @@ module.exports = function(sequelize, DataTypes) {
     manager_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "employ_basics",
+        model: "employee_basics",
         key: "id"
       }
     },
@@ -49,12 +42,12 @@ module.exports = function(sequelize, DataTypes) {
     {
       classMethods: {
         associate:function(models){
-          employ_basic.hasOne(models.employ_option, {
+          employee_basic.hasOne(models.employee_option, {
             onDelete:"cascade"
           })
         }
       }
   });
-  return employ_basic;
+  return employee_basic;
 };
 

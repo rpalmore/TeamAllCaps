@@ -6,7 +6,7 @@ module.exports = function(app){
 	app.get("/index", 
 		require('connect-ensure-login').ensureLoggedIn("/login"),
 		function(req,res){
-			db.employ_badge.findAll({order: 'createdAt DESC', limit:10}).then(function(data){
+			db.employee_badge.findAll({order: 'createdAt DESC', limit:10}).then(function(data){
 				var badges = [];
 				for (key in data){
 					var badge = {

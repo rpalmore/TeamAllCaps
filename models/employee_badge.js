@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var employ_badge = sequelize.define("employ_badge", {
+  var employee_badge = sequelize.define("employee_badge", {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -13,10 +13,10 @@ module.exports = function(sequelize, DataTypes) {
     recipient_name: { 
       type: DataTypes.STRING,
       allowNull: false,
-      references: {
-        model: "employ_basics",
-        key: "name"
-      }
+      // references: {
+      //   model: "employee_basics",
+      //   key: "name"
+      // }
     },
     badgeid: {
       type: DataTypes.STRING,
@@ -31,5 +31,5 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     }
   });
-  return employ_badge;
+  return employee_badge;
 };

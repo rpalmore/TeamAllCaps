@@ -13,9 +13,6 @@ $(document).ready(function() {
         "Rebecca Palmore": "/assets/images/profilePictures/Rebecca.png",
         "Susan Heiniger": "/assets/images/profilePictures/Susan.png",
         "Yilin Xu": "/assets/images/profilePictures/Yilin.png",
-        "Ethan Romba": "/assets/images/profilePictures/Ethan.png",
-        "Steven Daoud": "/assets/images/profilePictures/Steven.png",
-        "Chris Mendoza": "/assets/images/profilePictures/Chris.png",
         "Guest User": "/assets/images/profilePictures/GuestUser.jpg"
     },
     limit: 20, // The max amount of results that can be shown at once. Default: Infinity.
@@ -49,9 +46,6 @@ $(document).ready(function() {
         "Rebecca Palmore": "/assets/images/profilePictures/Rebecca.png",
         "Susan Heiniger": "/assets/images/profilePictures/Susan.png",
         "Yilin Xu": "/assets/images/profilePictures/Yilin.png",
-        "Ethan Romba": "/assets/images/profilePictures/Ethan.png",
-        "Steven Daoud": "/assets/images/profilePictures/Steven.png",
-        "Chris Mendoza": "/assets/images/profilePictures/Chris.png",
         "Guest User": "/assets/images/profilePictures/GuestUser.jpg"
     },
     limit: 20, // The max amount of results that can be shown at once. Default: Infinity.

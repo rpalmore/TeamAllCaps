@@ -5,21 +5,21 @@ module.exports =  function(app){
 		require('connect-ensure-login').ensureLoggedIn(),
 		function(req, res){			
 		console.log("routehit", req.params.name);
-		db.employ_basic.findOne({
+		db.employee_basic.findOne({
 			where: {
 				name: req.params.name
 			},
-        	include:[db.employ_option]
+        	include:[db.employee_option]
 		}).then(function(employee){	
 			console.log("employee", employee)
 			// if(valid_names.indexOf(req.params.name)!==-1){
 			if (employee) {
-				db.employ_badge.findAll({ where: {
+				db.employee_badge.findAll({ where: {
 						$or: [{sender_name: employee.name}, {recipient_name: employee.name}]
 					}, order: 'createdAt DESC', limit:10
 				}).then(function(badges){
 					var hbsObject = {
-						favorite : employee.dataValues.employ_option.dataValues.favorite,
+						favorite : employee.dataValues.employee_option.dataValues.favorite,
 						user : req.user, //feed logged in user info into main.handlebars
 						name: employee.name,
 						title: employee.title,
