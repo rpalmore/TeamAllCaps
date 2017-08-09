@@ -1,8 +1,8 @@
 /*COLOR PALETTE*/
-/* for header/footer BG/landing BG - dark yellow - #ffda21*/
-/* for body BG - lighter yellow - #ffe354 */
-/* for text - lightest yellow - #fffbe4 */
-/* for accents - light/dark teal - #6DDDB8/#00CB88  && charcoal - #767676*/
+/* for header/footer BG/landing BG - dark teal - #0b9fa5*/
+/* for body BG - lighter teal - #92cfd9 */
+/* for text - #fff */
+/* for accents - light/dark coral - #ffcece/#fba0a1  && brightest coral - #ff7f80*/
 
 /*-----------------*/
 
@@ -13,16 +13,17 @@ html, body {
 }
 
 body {
-  background-color: #ffda21;
-  color: #fffbe4;
+  background-color: #0b9fa5;
+  color: #fff;
   font-size: 22px;
   font-family: 'Raleway', sans-serif;
   letter-spacing: 0.1em;
 }
 
 h1, p {
-    color: #fffbe4;
+  color: #fff;
 }
+
 
 h1 {
   font-family: 'Lobster', cursive;
@@ -36,16 +37,15 @@ h3 {
 
 .flow-text {
     font-size: 16px;
-    color: #00CB88;
+    color: #fff;
 }
 
 a {
-    color: #fffbe4;
-    cursor: pointer;
+  color: #b2ecf5;
 }
 
-a:hover, a:active {
-    color: #fff;
+a:hover {
+  color: #fff;
 }
 
 #intro-text {
@@ -64,13 +64,15 @@ a:hover, a:active {
 /*-----------------*/
 
 /*BUTTONS*/
-.waves-effect.waves-meeshteal {
-     /* The alpha value allows the text and background color
-     of the button to still show through. */
-      background-color: rgba(109, 221, 184, 0.98);
-    }
+
 .btn {
-    background-color: #6DDDB8;
+    background-color: #ffd60d;
+    box-shadow: none;
+}
+
+.btn:hover, .btn-large:hover, .btn:focus, .btn-large:focus, .btn:active, .btn-large:active {
+     background-color: #ffec66;
+     box-shadow: none; 
 }
 
 #newuser-submit, #user-login {
@@ -97,12 +99,12 @@ a:hover, a:active {
 
 /*MODAL*/
 .modal, .modal .modal-footer {
-    background-color: #ffda21;
+    background-color: #0b9fa5;
     font-size: 18px;
 }
 
 .modal .modal-close {
-  background-color: #ffda21;
+  background-color: #0b9fa5;
   color: #fffbe4;
 }
 
@@ -126,50 +128,45 @@ a:hover, a:active {
 /*-----------------*/
 
 /*FORMS*/
-
 input:-webkit-autofill, input:-webkit-autofill:active, input:-webkit-autofill:hover, input:-webkit-autofill:visited {
-    -webkit-box-shadow: 0 0 0px 1000px #fdda29 inset !important;
-    -webkit-text-fill-color: #fffbe4 !important;
-}
-
-#replace-name {
-  font-size: 12px;
-  color: #00cb88;
-  margin-bottom: 15px;
+    -webkit-box-shadow: 0 0 0px 1000px #0b9fa5 inset !important;
+    -webkit-text-fill-color: #fff !important;
 }
 /* label color */
 .input-field {
+    padding-left: 20px;
     margin-top: 0;
 }
-.input-field label {
-    color: #fffbe4;
+.input-field label, .input-field label:active, .input-field label:hover {
+    color: #fff;
 }
 
-input[type=text], input[type=password], input[type=email] {
-    border-bottom: 1px solid #fffbe4;
+input[type=text], input[type=password], input[type=email], textarea.materialize-textarea {
+    border-bottom: 1px solid #fff;
 }
 /* label focus color */
-.input-field input[type=text]:focus + label, .input-field input[type=email]:focus + label, .input-field input[type=password]:focus + label {
-    color: #fffbe4;
+.input-field input[type=text]:focus + label, .input-field input[type=email]:focus + label, .input-field input[type=password]:focus + label, .input-field input[type=textarea]:focus + label, textarea.materialize-textarea:focus:not([readonly]) + label {
+    color: #fff;
 }
 /* label underline focus color */
-.input-field input[type=text]:focus, .input-field input[type=email]:focus, .input-field input[type=password]:focus {
-    border-bottom: 1px solid #fffbe4;
-    box-shadow: 0 1px 0 0 #fffbe4;
+.input-field input[type=text]:focus, .input-field input[type=email]:focus, .input-field input[type=password]:focus, textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 1px 0 0 #fff;
+    color: #fff;
 }
 /* valid color */
 .input-field input[type=text].valid, .input-field input[type=email].valid, .input-field input[type=password].valid {
-    border-bottom: 1px solid #fffbe4;
-    box-shadow: 0 1px 0 0 #fffbe4;
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 1px 0 0 #fff;
 }
 /* invalid color */
 .input-field input[type=text].invalid, .input-field input[type=email].invalid, .input-field input[type=password].invalid {
-    border-bottom: 1px solid #fffbe4;
-    box-shadow: 0 1px 0 0 #fffbe4;
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 1px 0 0 #fff;
 }
 /* icon prefix focus color */
 .input-field .prefix.active {
-    color: #fffbe4;
+    color: #fff;
 }
 
 .input-field label, input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
@@ -177,16 +174,16 @@ input[type=text], input[type=password], input[type=email] {
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: #fdda29;
+  color: #fff;
 }
 ::-moz-placeholder { /* Firefox 19+ */
-  color: #fdda29;
+  color: #fff;
 }
 :-ms-input-placeholder { /* IE 10+ */
-  color: #fdda29;
+  color: #fff;
 }
 :-moz-placeholder { /* Firefox 18- */
-  color: #fdda29;
+  color: #fff;
 }
 
 @media only screen and (max-width: 600px) {
@@ -194,7 +191,6 @@ input[type=text], input[type=password], input[type=email] {
       font-size: 12px;
   }
 }
-
 
 
 

@@ -1,9 +1,8 @@
 /*COLOR PALETTE*/
-/* for header/footer BG/landing BG - dark yellow - #ffda21*/
-/* for body BG - lighter yellow - #ffe354 */
-/* for text - lightest yellow - #fffbe4 */
-/* for accents - light/dark teal - #6DDDB8/#00CB88  && charcoal - #767676*/
-
+/* for header/footer BG/landing BG - dark teal - #0b9fa5*/
+/* for body BG - lighter teal - #92cfd9 */
+/* for text - #fff */
+/* for accents - light/dark coral - #ffcece/#fba0a1  && brightest coral - #ff7f80*/
 
 /*-----------------*/
 
@@ -13,25 +12,25 @@
 	height: auto;
 }
 .collapsible, .collapsible-body, .collapsible-header, .faq-icon {
-	background-color: #ffda21;
-	color: #fffbe4;
+	background-color: #0b9fa5;
+	color: #fff;
 	box-shadow: none;
 	font-size: 20px;
 }
 
 .collapsible-header {
-    border-bottom: 3px solid #ffe354;
+    border-bottom: 3px solid #92cfd9;
 }
 
 .collapsible {
-    border-top: 1px solid #ffe354;
+    border-top: 1px solid #92cfd9;
     border-right: none;
     border-left: none;
 }
 
 .collapsible-body {
-	border-bottom: 3px solid #ffe354;
-	background-color: #00CB88;
+	border-bottom: 3px solid #92cfd9;
+	background-color: #ff7f80;
 }
 
 #position {

@@ -1,5 +1,11 @@
 # Plaudit! by TEAM ALL CAPS
 
+[See it live on Heroku!](https://plauditapp.herokuapp.com)
+
+Guests can view the site using the following credentials - 
+
+Username: plauditapp@gmail.com | Password: guest
+
 ## Description
 
 Plaudit! is a workplace application that focuses on encouraging a supportive and uplifting work environment through positive peer feedback and recognition. Co-workers are enabled to commend one another for their hard work with company-wide visibility.
@@ -21,7 +27,6 @@ Plaudit users may only 'register' for the site once they exist in the organizati
 Once a user logs in, they see a feed of all the awards recently given to other members of their organization.  From here, they can access their own profile page, search for the profile page of any other user, or give a badge to another user.
 
 When giving a badge, a user can choose to award a co-worker a number of different award types (currently represented by a crown, a trophy, a star, and a lightbulb) and include a description for the award.  This will add a post about the award to the main feed (which is seen by every user when they log in) as well as the profile page of the user who received the award.  A notification email is also sent to both the user and their direct supervisor so that a recognition does not go unnoticed. 
-
 
 ## Technologies Used
 
@@ -53,15 +58,11 @@ When giving a badge, a user can choose to award a co-worker a number of differen
 * Javascript
 * jQuery
 * Materialize
+* Sequelize
 
 ## Getting Started and Prerequisites
 
-Log in as a guest user
-
-username: plauditapp@gmail.com
-password: guest
-
-Clone or download the repository to your desktop
+Clone or download the repository to your desktop.
 
 Users will need Google Chrome web browser for testing the application and Sublime (or another tool) for viewing/editing the code.  Users will also need to install the npm packages (provided in the package.json and listed above under "Technologies Used") via the terminal and use MySQL Workbench in order to establish a database.
 
@@ -83,45 +84,29 @@ The FAQ page lists commonly asked questions and their corresponding answers in a
 
 The log out function in the side nav returns the user to the landing page.
 
+
 ## Application and Features Visual Tour
 
-### Landing Page (New User)
-![](http://i.imgur.com/JdiUKca.png)  
-
-### Landing Page (New User - ALTERNATE COLOR SCHEME)
-![](http://i.imgur.com/mmglk0Y.png)
-
-### Landing Page (Returning User)
-![](http://i.imgur.com/GgjTBvP.png) 
+### Landing Page Login (Returning & New User)
+![](http://i.imgur.com/AzRdz81.png)  
 
 ### Main Page (Activity Feed)
-![](http://i.imgur.com/ZGfOS1s.png)
-
-### Give a Badge Page
-![](http://i.imgur.com/bqPdgiT.png) 
-
-### Give a Badge Page - ALTERNATE COLOR SCHEME
-![](http://i.imgur.com/R685oXk.png)
-
-### Profile Page (with user specific activity feed)
-![](http://i.imgur.com/Ae1vxhz.png) 
+![](http://i.imgur.com/L4c2ypI.png)
 
 ### Side Navigation
-![](http://i.imgur.com/CarLeh2.png?1)
+![](http://i.imgur.com/6a6Ob6M.png)
 
-### Frequently Asked Questions Page
-![](http://i.imgur.com/2obdk0J.png)
+### Profile Page (with user specific activity feed) - Also highlighting header searchbar autocomplete
+![](http://i.imgur.com/OCxPxs7.png) 
 
-### Badge Receipt Notification Email
-![](http://i.imgur.com/29w0hzW.png) 
+### Give a Badge Page 
+![](http://i.imgur.com/bgjwy1q.png) 
 
-### Forgot Password Email
-![](http://i.imgur.com/gDwFH43.png) 
+### Email Notifications
+![](http://i.imgur.com/Ar1ZS6b.png)) 
 
-
-### Mobile Versions
-![](http://i.imgur.com/WwgZ5xh.png) ![](http://i.imgur.com/PJSFd2i.png) ![](http://i.imgur.com/LAw0hbr.png)
-![](http://i.imgur.com/3Cvu5y9.png) ![](http://i.imgur.com/8ZGCW7H.png) ![](http://i.imgur.com/YyhR6DR.png)
+### Mobile
+![](http://i.imgur.com/FXdy6iv.png)![](http://i.imgur.com/YGVDg1p.png)
 
 ## Code Walkthrough
 Please refer to the repository files for coding samples; The sections are commented to indicate their functionality.

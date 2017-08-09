@@ -2,31 +2,27 @@
       <div class="col s12">
         <h2 class="center-align">Welcome {{user.name}}!</h2>
       </div>
-    </div>
-    <!-- <div class="row">
-      <div class="col s12">
-        <img src="{{user.photo_path}}" alt="" class="circle">
-      </div>
-    </div> -->
-    
+    </div>   
+
     <div class="row">
       <div class="col s12">
         <h3 class="center-align">Activity Feed</h3>
         <div class="header-border"></div>
       </div>
     </div>
-    <div class="row scroll">
+
+   <div class="row scroll" id="main-feed">
       <div class="col s12">
         <ul class="collection">
           {{#each badges}}
-          	<li class="collection-item avatar">
+            <li class="collection-item avatar">
 
               <img src="{{badge_url}}" alt="" class="circle">
 
               <span class="title"><a href="/profile/{{this.sender_name}}" class="profile-link">{{this.sender_name}}</a> gave a badge to <a href="/profile/{{this.recipient_name}}" class="profile-link">{{this.recipient_name}}</a>!</span>
 
               <p>{{comment}}</p>
-          	</li>
+            </li>
           {{/each}}
         </ul>
       </div>
