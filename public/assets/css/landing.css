@@ -1,3 +1,5 @@
+
+
 /*COLOR PALETTE*/
 /* for header/footer BG/landing BG - dark teal - #0b9fa5*/
 /* for body BG - lighter teal - #92cfd9 */
@@ -118,7 +120,6 @@ a:hover {
 
 #confirm {
   height: 50px;
-  color: #00CB88;
 }
 
 #recover-pw {

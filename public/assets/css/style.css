@@ -33,14 +33,14 @@ h2 {
 h3 {
   font-size: 20px;
   margin: 0.5rem 0 1rem 0;
-  color: #00CB88;
+/*  color: #00CB88;*/
 }
 
 .header-border {
   margin: 0 auto;
   width: 20%;
   height: 3px;
-  background-color: #00CB88;
+  background-color: #ffd60d;
 }
 
 .main {
@@ -85,7 +85,7 @@ nav {
 /*NAVBAR*/
 nav .brand-logo {
   font-family: 'Lobster', cursive;
-  color: #fffbe4;
+  color: #fff;
   font-size: 2.6rem;
   letter-spacing: 0;
 }
@@ -298,7 +298,7 @@ footer.page-footer {
   h3 {
     font-size: 16px;
     margin: 1.2rem 0 1rem 0;
-    color: #00CB88;
+    /*color: #00CB88;*/
   }
 
   .header-border {

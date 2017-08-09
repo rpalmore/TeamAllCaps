@@ -2,7 +2,7 @@
 
 [See it live on Heroku!](https://plauditapp.herokuapp.com)
 
-Guests can view the site using the following credentials - 
+Guests can enter the site using the following credentials
 
 Username: plauditapp@gmail.com | Password: guest
 
