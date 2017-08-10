@@ -13,10 +13,10 @@ module.exports = function(sequelize, DataTypes) {
     recipient_name: { 
       type: DataTypes.STRING,
       allowNull: false,
-      // references: {
-      //   model: "employee_basics",
-      //   key: "name"
-      // }
+      references: {
+        model: "employee_basics",
+        key: "name"
+      }
     },
     badgeid: {
       type: DataTypes.STRING,
