@@ -73,11 +73,6 @@ function updatePassword(email, password){
         var hashedPassword;
         var salt = bcrypt.genSaltSync(10);
         hashedPassword = bcrypt.hashSync(req.body.password, salt);
-       //  bcrypt.genSalt(10, function(err, salt) {
-       //      bcrypt.hash(newPassword, salt, function(err, hash) {
-       //          hashedPassword = hash;
-       //          });
-       // })
         db.employee_basic.findOne({
             where:{
                 email:email
@@ -122,7 +117,7 @@ function updatePassword(email, password){
                         to: email,
                         subject: "Your Plaudit Password Request",
                         text: "Here is your new Plaudit password: " + newPassword,
-                        html: "<body style='background-color: #0b9fa5; text-align: center; padding-bottom: 15px; padding-top: 15px; font-family: Georgia; font-style: normal; font-size: 1.6rem;'><p style='color: #fff; font-style: italic; font-size: 2.6rem;'>Plaudit!</p><p style='color: #fff;'>Here is your new Plaudit password: </p><b>" + newPassword + "</b></p><p><a href='https://plaudit.herokuapp.com/' target='blank' style='color: #ffda21; font-size: 1.3rem; font-style: italic;'>Log in to Plaudit</p></body>"
+                        html: "<body style='background-color: #0b9fa5; text-align: center; padding-bottom: 15px; padding-top: 15px; font-family: Georgia; font-style: normal; font-size: 1.6rem;'><p style='color: #fff; font-style: italic; font-size: 2.6rem;'>Plaudit!</p><p style='color: #fff;'>Here is your new Plaudit password: </p><b>" + newPassword + "</b></p><p><a href='https://plauditlive.herokuapp.com/' target='blank' style='color: #ffda21; font-size: 1.3rem; font-style: italic;'>Log in to Plaudit</p></body>"
                     }
                     smtpTransport.sendMail(mailOptions, function(error, response){
                         if (error){
@@ -154,11 +149,6 @@ function updatePassword(email, password){
         var hashedPassword;
         var salt = bcrypt.genSaltSync(10);
         hashedPassword = bcrypt.hashSync(req.body.password, salt);
-       //  bcrypt.genSalt(10, function(err, salt) {
-       //      bcrypt.hash(newPassword, salt, function(err, hash) {
-       //          hashedPassword = hash;
-       //          });
-       // })
         db.employee_basic.findOne({
             where:{
                 email:req.body.email

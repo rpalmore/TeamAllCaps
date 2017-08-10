@@ -12,7 +12,6 @@ module.exports =  function(app){
         	include:[db.employee_option]
 		}).then(function(employee){	
 			console.log("employee", employee)
-			// if(valid_names.indexOf(req.params.name)!==-1){
 			if (employee) {
 				db.employee_badge.findAll({ where: {
 						$or: [{sender_name: employee.name}, {recipient_name: employee.name}]

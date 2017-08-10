@@ -24,7 +24,6 @@ module.exports = function(app) {
         require('connect-ensure-login').ensureLoggedIn("/login"),
         function(req, res) {
             //TODO: implement an if/else check to make sure all data exists - including a read query to check for recipient name? unless its done beforehand.
-            // SEE NOTE BELOW AT /checkname ROUTE.
             db.employee_badge.create({
                 sender_name: req.user.name,
                 recipient_name: req.body.recipient_name,
@@ -43,7 +42,7 @@ module.exports = function(app) {
                     to: data.email,
                     subject: "Congrats " + data.name + "! A Plaudit Badge Awaits",
                     text: "Hi " + data.name + "! You got a Plaudit Badge from" + req.user.name + "for your good work at the office.",
-                    html: "<body style='background-color: #0b9fa5; text-align: center; padding-bottom: 15px; padding-top: 15px; font-family: Georgia; font-style: normal; font-size: 1.6rem;'><p style='color: #fff; font-style: italic; font-size: 2.6rem;'>Plaudit!</p><p style='color: #fff;'>Congrats, <b>" + data.name + "!</b></p><p style='color: #fff; font-size: 1.6rem;'>You received a Plaudit Badge from " + req.user.name + " for your awesome work. <p><a href='https://plaudit.herokuapp.com/' target='blank' style='color: #ffda21; font-size: 1.3rem; font-style: italic;'>Log in to Plaudit to see details.</p></body>"
+                    html: "<body style='background-color: #0b9fa5; text-align: center; padding-bottom: 15px; padding-top: 15px; font-family: Georgia; font-style: normal; font-size: 1.6rem;'><p style='color: #fff; font-style: italic; font-size: 2.6rem;'>Plaudit!</p><p style='color: #fff;'>Congrats, <b>" + data.name + "!</b></p><p style='color: #fff; font-size: 1.6rem;'>You received a Plaudit Badge from " + req.user.name + " for your awesome work. <p><a href='https://plauditlive.herokuapp.com/' target='blank' style='color: #ffda21; font-size: 1.3rem; font-style: italic;'>Log in to Plaudit to see details.</p></body>"
                 };
                 smtpTransport.sendMail(mailOptions, function(error, response) {
                     if (error) {
@@ -65,7 +64,7 @@ module.exports = function(app) {
                         to: data.email,
                         subject: "A Plaudit Badge For Your Employee!",
                         text: "Hi " + data.name + "! One of your employees got a Plaudit Badge for their good work at the office.",
-                        html: "<body style='background-color: #0b9fa5; text-align: center; padding-bottom: 15px; padding-top: 15px; font-family: Georgia; font-style: normal; font-size: 1.6rem;'><p style='color: #fff; font-style: italic; font-size: 2.6rem;'>Plaudit!</p><p style='color: #fff;'>Hi, <b>" + data.name + "!</b></p><p style='color: #fffbe4; font-size: 1.6rem;'>One of your employees received a Plaudit Badge for their awesome work. We thought you might like to know!</p><p><a href='https://plaudit.herokuapp.com/' target='blank' style='color: #ffda21; font-size: 1.3rem; font-style: italic;'>Log in to Plaudit to see details.</p></body>"
+                        html: "<body style='background-color: #0b9fa5; text-align: center; padding-bottom: 15px; padding-top: 15px; font-family: Georgia; font-style: normal; font-size: 1.6rem;'><p style='color: #fff; font-style: italic; font-size: 2.6rem;'>Plaudit!</p><p style='color: #fff;'>Hi, <b>" + data.name + "!</b></p><p style='color: #fffbe4; font-size: 1.6rem;'>One of your employees received a Plaudit Badge for their awesome work. We thought you might like to know!</p><p><a href='https://plauditlive.herokuapp.com/' target='blank' style='color: #ffda21; font-size: 1.3rem; font-style: italic;'>Log in to Plaudit to see details.</p></body>"
                     };
                     smtpTransport.sendMail(mailOptions, function(error, response) {
                         if (error) {
