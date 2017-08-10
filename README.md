@@ -1,6 +1,6 @@
 # Plaudit! by TEAM ALL CAPS
 
-[See it live on Heroku!](https://plauditapp.herokuapp.com)
+[See it live on Heroku!](https://plauditlive.herokuapp.com/)
 
 Guests can enter the site using the following credentials
 
@@ -68,21 +68,21 @@ When giving a badge, a user can choose to give a co-worker a number of different
 
 Clone or download the repository to your desktop.
 
-Users will need Google Chrome web browser for testing the application and Sublime (or another tool) for viewing/editing the code.  Users will also need to install the npm packages (provided in the package.json and listed above under "Technologies Used") via the terminal and use MySQL Workbench in order to establish a database.
+Users will need Google Chrome web browser for testing the application and Sublime (or another tool) for viewing/editing the code. Users will also need to install the npm packages (provided in the package.json and listed above under "Technologies Used") via the terminal and use MySQL Workbench in order to establish a database.
 
 ## Testing
 
-Download or clone the repository to your desktop.  Create a database in MySQL Workbench entitled "star_power."  Use said database and seed it with the seeds from the document SQL_credit or add your own seeds into SQL_credit and enter them into the MySQL database.  Add your MySQL Workbench password to the config.json.
+Download or clone the repository to your desktop. Create a database in MySQL Workbench entitled "star_power." Seed it with the data from the document seed_data or add your own data into the MySQL database. Don't forget to update config.json with your credentials.
 
 Navigate to the file folder that holds the Plaudit! files in the terminal.  Type "npm i --s".  Then run the server: "node server.js" 
 
-From there, navigate to localhost:8080 in your browser to open up the landing page of the website. Create an account based on one of the established seeds and log in.  Once logged in, you will be taken to the index.handlebars page were the main activity feed is located.  You will also see a nav bar at the top of the page which includes both a search bar in the right hand corner and a hamburger menu in the left. 
+From there, navigate to localhost:8080 in your browser to open up the landing page of the website. Create an account based on one of the established seeds and log in.  Once logged in, you will be taken to the index.handlebars page where the main activity feed is located.  
 
-One can search for other users using the search bar.  It will take the user to that person's profile page.  The hamburger menu, once clicked, will trigger a side nav to slide out from the left side of the page.  Users can navigate to the main activity feed, their profile page, the give a badge page, or the frequently asked questions page.  Users can also log out from the side nav.
+Search for other users using the search bar. The hamburger menu (upper left) will trigger a side nav for various pages, allowing a user to visit their profile page, give a badge, etc. Users can also log out from the side nav.
 
-Profile pages display the profile owner's name, headshot, work role, phone number, email address, and LinkedIn profile link.  Below this is an activity feed specific to the profile owner
+Profile pages display the profile owner's name, headshot, work role, phone number, email address, and LinkedIn profile link. Below this is an activity feed specific to the profile owner.
 
-The Give a Badge page offers a brief form in which the user can enter the name of a recipient, select one of four colorful badges, and enter a message for their recipient.  Clicking the submit button will push the badge to the activity feed, the recipient and the user's activity feeds, and take the user to main activity feed.
+The Give a Badge page offers a brief form in which the user can enter the name of a recipient, select one of four colorful badges, and enter a message for their recipient. Clicking the submit button will push the badge to the activity feed, the recipient and the user's activity feeds, and take the user to main activity feed.
 
 The FAQ page lists commonly asked questions and their corresponding answers in a collapsible format.
 
@@ -113,7 +113,7 @@ The log out function in the side nav returns the user to the landing page.
 ![](http://i.imgur.com/FXdy6iv.png)![](http://i.imgur.com/YGVDg1p.png)
 
 ## Code Walkthrough
-Please refer to the repository files for coding samples; The sections are commented to indicate their functionality.
+Please refer to the repository files for coding samples; the sections are commented to indicate their functionality.
 
 If you have any questions about how or why something works, feel free to contact a member of the [Project Team](https://github.com/SusanArend/TeamAllCaps) for details!
 
