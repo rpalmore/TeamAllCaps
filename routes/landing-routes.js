@@ -13,14 +13,17 @@ if (!process.env.PORT) {
     var authentication = process.env
 };
 
-var smtpTransport = nodemailer.createTransport({
-    service: "gmail",
-    host: "smtp.gmail.com",
+let transporter = nodemailer.createTransport({
+    service: 'Gmail',
     auth: {
-      user: authentication.user,
-      pass: authentication.pass
+        type: 'OAuth2',
+        user: authentication.user,
+        clientId: authentication.clientID,
+        clientSecret: authentication.clientSecret,
+        refreshToken: authentication.refreshToken,
     }
 });
+
 var randomstring = require("randomstring"); 
     
 module.exports = function(app) {
@@ -119,7 +122,7 @@ function updatePassword(email, password){
                         text: "Here is your new Plaudit password: " + newPassword,
                         html: "<body style='background-color: #0b9fa5; text-align: center; padding-bottom: 15px; padding-top: 15px; font-family: Georgia; font-style: normal; font-size: 1.6rem;'><p style='color: #fff; font-style: italic; font-size: 2.6rem;'>Plaudit!</p><p style='color: #fff;'>Here is your new Plaudit password: </p><b>" + newPassword + "</b></p><p><a href='https://plauditlive.herokuapp.com/' target='blank' style='color: #ffda21; font-size: 1.3rem; font-style: italic;'>Log in to Plaudit</p></body>"
                     }
-                    smtpTransport.sendMail(mailOptions, function(error, response){
+                    transporter.sendMail(mailOptions, function(error, response){
                         if (error){
                             console.log(error);
                             res.send("error");
