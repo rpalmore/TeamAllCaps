@@ -7,7 +7,6 @@ function updatePassword(email, password){
 	$.ajax({
 	   		method: "PUT",
 	   		url: "/api/updatePassword",
-	   		// dataType: "JSON",
 	   		data: dataObject
 	   	})
 };

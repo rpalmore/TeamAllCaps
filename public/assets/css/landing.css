@@ -63,6 +63,10 @@ a:hover {
   margin-bottom: 5px;
 }
 
+.error-text {
+  color: #ffd60d;
+}
+
 /*-----------------*/
 
 /*BUTTONS*/
