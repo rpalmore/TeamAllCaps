@@ -13,6 +13,7 @@ var PORT = process.env.PORT || 8080;
 // Determine our connection
 // =============================================================
 if (PORT === 8080) {
+	console.log("Dev connection");
     var authentication = require("./config/authentication.js");
 } else {
     console.log("Heroku connection");

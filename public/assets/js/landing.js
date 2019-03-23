@@ -33,6 +33,8 @@ function updatePassword(email, password){
 	    	});
 	    };
 	});
+// RESOURCE: https://thepandeysoni.org/2016/07/12/user-authentication-using-passport.js-in-node.js/
+
 
 // Adding feedback message to front-end on "sign up" section.
 // Great if we can replace USER.EMAIL with NAME -- don't know how to do it.
